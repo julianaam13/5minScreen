@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -58,4 +60,22 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.8.2")
     implementation("androidx.compose.material:material:1.7.3") // para BottomNavigation
+
+    implementation("io.coil-kt:coil-compose:2.7.0")
+
+// Room Database
+    implementation("androidx.room:room-runtime:2.8.5")
+    implementation("androidx.room:room-ktx:2.8.5")
+
+// Geração de código do Room
+    ksp("androidx.room:room-compiler:2.8.5")
+
+    // Retrofit: pedidos HTTP à API da TMDB
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")  //JSON em Kotlin
+    implementation("com.google.code.gson:gson:2.13.2")
+
+    // ViewModel em Compose (função viewModel())
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
+
 }
