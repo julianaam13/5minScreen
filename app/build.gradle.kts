@@ -63,6 +63,9 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.7.0")
 
+// Icons
+    implementation("androidx.compose.material:material-icons-core")
+
 // Room Database
     implementation("androidx.room:room-runtime:2.8.5")
     implementation("androidx.room:room-ktx:2.8.5")
